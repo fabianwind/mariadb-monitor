@@ -25,7 +25,7 @@ RETRY_INTERVAL=5
 # 開始記錄
 echo "$CURRENT_TIME: 開始檢查MariaDB服務狀態..." >> $LOG_FILE
 
-# 檢查並重啟服務，蟲試次數
+# 檢查並重啟服務，重試次數
 for ((i=1; i<=MAX_RETRIES; i++)); do
     if check_mariadb; then
         echo "$CURRENT_TIME: MariaDB服務運行正常。" >> $LOG_FILE
